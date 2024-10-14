@@ -47,6 +47,7 @@ async function readAllBooks() {
 app.get("/books", async (req, res) => {
   try {
     const books = await readAllBooks()
+    console.log("Returned books:", books)
     if(books.length != 0) {
       res.json(books)
     } else {
